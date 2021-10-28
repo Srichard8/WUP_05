@@ -63,6 +63,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
+While analyzing this section, there's a analysis from a person and the fisher test. The "persons" observed count results shows 210/5,484 were treated using the drug prescription, while, 147/5,927 were treated with using the placebo, this shows a 63% semi-positive difference between the both users. According to the counts by null, 172/5,521 were treated using the drug, while, 184/5,889 were treated using the placebo which is a more positive result between the both. The chi-sq statistic 8.04 shows the drugs treated women & 7.54 women prescribed placebo were treated, showing, a positive impact from both medications. A big difference was shown from both the person's test results and the fisher results.
 # Discussion and Conclusion
 
-<!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+<!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variables causes the other, or whether they perhaps are related for some other reason.  Watch the chapter 6 videos from the George-town videos collection.!-->
