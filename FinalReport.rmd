@@ -20,6 +20,11 @@ A new  preventative aides drug (triUmpsal) is under test in clinical trials. Con
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
+We need the results and percentage for just females data.
+```{r}
+females<-filter(triUmp,gender=="F")
+```
+
 
 # Results
 
@@ -31,10 +36,24 @@ A new  preventative aides drug (triUmpsal) is under test in clinical trials. Con
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
 
+```{r}
+barchartGC(~infected + treatment,data=females)
+barchartGC(~infected + treatment,data=females, type="percent")
+
+```
+
+While analyzing this chart, we can see that the drug percentage of that women used forced a negative impact on their health in catching aids. While analyzing the placebo chart, women taking the placebo prescription had a more positive chance in not catching aids. All in all, women with the drug received a more negative feedback than the women who took the placebo (Women who took the drug about 59% & women who took the placebo about 52%.
+
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+```{r}
+table1 <- xtabs(~infected + treatment, data=females)
+rowPerc(table1)
+colPerc(table1)
+```
 
+While Analyzing the data, we can see each infection percentage between the women who take drugs vs placebo as a treatment. Around 58% of women were infected using a drug prescribed while women who take placebo were estimated around 41% which shows placebo would help more than the drug prescription.
 ## Inferential Results
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
